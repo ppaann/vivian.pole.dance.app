@@ -1,0 +1,16 @@
+.about {
+  min-height: 10vh;
+  background-color: blanchedalmond;
+}
+.course {
+  min-height: 10vh;
+  background-color: plum;
+}
+.calendar {
+  min-height: 10vh;
+  background-color: chocolate;
+}
+.contact {
+  min-height: 10vh;
+  background-color: yellowgreen;
+}
