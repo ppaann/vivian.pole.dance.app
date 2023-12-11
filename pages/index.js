@@ -18,7 +18,7 @@ export default function Home() {
               id="about-description"
               className="basis-2/3 flex flex-col content-center"
             >
-              <div>
+              <div className="container mx-auto px-8">
                 <h3>I am Vivian</h3>
                 <p className="mt-12 text-xl font-light">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -39,21 +39,25 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="courses" className="border border-y-1 border-gray-300 ">
-        <div className="container mx-auto flex space-x-8 justify-between py-16 md:py-24">
+      <section
+        id="courses"
+        className="border border-y-1 border-gray-300 bg-white"
+      >
+        <h3 className="pt-16">Courses </h3>
+        <div className="container mx-auto flex flex-col md:flex-row md:space-x-8 justify-between py-16 md:py-24">
           <div className="basis-1/3 ">
             <div className="text-center">
               <Image src={course1} alt="dance Course 1" />
             </div>
-            <div className="block-wrap aspect-square flex justify-center items-center mt-8">
+            <div className="block-wrap aspect-square flex justify-center items-center mt-8 m-8 md:m-10">
               <div className="text-center">
                 <h4>Any age</h4>
                 <p>From 18 and above, enjoy yourself!</p>
               </div>
             </div>
           </div>
-          <div className=" basis-1/3 ">
-            <div className="block-wrap aspect-square flex justify-center items-center">
+          <div className=" basis-1/3 flex flex-col-reverse md:flex-col ">
+            <div className="block-wrap aspect-square flex justify-center items-center m-8 md:m-0 ">
               <div className="text-center">
                 <h4>Any shape</h4>
                 <p>Flexabilty and Technique to lift yourself up.</p>
@@ -77,7 +81,7 @@ export default function Home() {
         </div>
       </section>
       <section id="schedule">
-        <div className="container mx-auto py-8 md:py-16">
+        <div className="container mx-auto  p-8 md:p-0 md:py-8">
           <h3 className="my-8">Schedule</h3>
           <div className="flex flex-col lg:flex-row gap-16">
             <div className="basis-1/2">
@@ -113,7 +117,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="container mx-auto flex flex-col my-20 md:flex-row gap-8">
+        <div className="container mx-auto flex flex-col my-20 md:flex-row gap-8 p-8 md:p-0">
           <div className="basis-1/2">
             <h3>Address</h3>
             <address className="mt-8">
