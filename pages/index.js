@@ -19,8 +19,8 @@ export default function Home() {
               className="basis-2/3 flex flex-col content-center"
             >
               <div className="container mx-auto px-8">
-                <h3>I am Vivian</h3>
-                <p className="mt-12 text-xl font-light">
+                <h3 className="py-8">I am Vivian</h3>
+                <p className=" text-xl font-light">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                   Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
                   natoque penatibus et magnis dis parturient montes, nascetur
@@ -44,8 +44,8 @@ export default function Home() {
         className="border border-y-1 border-gray-300 bg-white"
       >
         <div className="container mx-auto">
-          <h3 className="pt-16 pl-8 sm:pl-0">Courses </h3>
-          <div className="flex flex-col md:flex-row md:space-x-8 justify-between py-16 md:py-24">
+          <h3 className="pt-16 pb-8 pl-8 sm:pl-0">Courses </h3>
+          <div className="flex flex-col md:flex-row md:space-x-8 justify-between pb-16 md:pb-24">
             <div className="basis-1/3 ">
               <div className="text-center">
                 <Image src={course1} alt="dance Course 1" />
@@ -118,8 +118,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="contact">
-        <div className="container mx-auto flex flex-col my-20 md:flex-row gap-8 p-8 md:p-0">
+      <Section id="contact" className="bg-white">
+        <div className="container mx-auto flex flex-col my-20 md:flex-row gap-8  py-16 md:py-24">
           <div className="basis-1/2">
             <h3>Address</h3>
             <address className="mt-8">
