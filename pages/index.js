@@ -1,17 +1,17 @@
 import styles from "../styles/home.module.css";
 import Image from "next/image";
 import selfPhoto from "../public/assets/about_0.jpg";
-
 import course1 from "../public/assets/course_1.jpeg";
 import course2 from "../public/assets/course_2.jpg";
 import course3 from "../public/assets/course_5.jpg";
 
 import Calendar from "../components/Calendar";
+import Section from "../components/Section";
 
 export default function Home() {
   return (
     <>
-      <section id="about">
+      <Section id="about">
         <div className="container mx-auto py-16 md:py-24 ">
           <div className="flex flex-col lg:flex-row gap-16 justify-between">
             <div
@@ -38,53 +38,55 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section
+      </Section>
+      <Section
         id="courses"
         className="border border-y-1 border-gray-300 bg-white"
       >
-        <h3 className="pt-16">Courses </h3>
-        <div className="container mx-auto flex flex-col md:flex-row md:space-x-8 justify-between py-16 md:py-24">
-          <div className="basis-1/3 ">
-            <div className="text-center">
-              <Image src={course1} alt="dance Course 1" />
-            </div>
-            <div className="block-wrap aspect-square flex justify-center items-center mt-8 m-8 md:m-10">
+        <div className="container mx-auto">
+          <h3 className="pt-16 pl-8 sm:pl-0">Courses </h3>
+          <div className="flex flex-col md:flex-row md:space-x-8 justify-between py-16 md:py-24">
+            <div className="basis-1/3 ">
               <div className="text-center">
-                <h4>Any age</h4>
-                <p>From 18 and above, enjoy yourself!</p>
+                <Image src={course1} alt="dance Course 1" />
+              </div>
+              <div className="block-wrap aspect-square flex justify-center items-center  m-8 mt-8 md:mx-0 mb-0">
+                <div className="text-center">
+                  <h4>Any age</h4>
+                  <p>From 18 and above, enjoy yourself!</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" basis-1/3 flex flex-col-reverse md:flex-col ">
-            <div className="block-wrap aspect-square flex justify-center items-center m-8 md:m-0 ">
-              <div className="text-center">
-                <h4>Any shape</h4>
-                <p>Flexabilty and Technique to lift yourself up.</p>
+            <div className=" basis-1/3 flex flex-col-reverse md:flex-col ">
+              <div className="block-wrap aspect-square flex justify-center items-center m-8 md:m-0 ">
+                <div className="text-center">
+                  <h4>Any shape</h4>
+                  <p>Flexabilty and Technique to lift yourself up.</p>
+                </div>
+              </div>
+              <div className="text-center mt-8">
+                <Image src={course2} alt="dance Course 1" />
               </div>
             </div>
-            <div className="text-center mt-8">
-              <Image src={course2} alt="dance Course 1" />
-            </div>
-          </div>
-          <div className=" basis-1/3 m-0">
-            <div className="text-center">
-              <Image src={course3} alt="dance Course" />
-            </div>
-            <div className="block-wrap aspect-square flex justify-center items-center mt-8">
+            <div className=" basis-1/3 m-0">
               <div className="text-center">
-                <h4>Any gender</h4>
-                <p>Enjoy your body movement</p>
+                <Image src={course3} alt="dance Course" />
+              </div>
+              <div className="block-wrap aspect-square flex justify-center items-center m-8 mt-8 md:mx-0 mb-0">
+                <div className="text-center">
+                  <h4>Any gender</h4>
+                  <p>Enjoy your body movement</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section id="schedule">
+      </Section>
+      <Section id="schedule">
         <div className="container mx-auto  p-8 md:p-0 md:py-8">
           <h3 className="my-8">Schedule</h3>
           <div className="flex flex-col lg:flex-row gap-16">
-            <div className="basis-1/2">
+            <div className="basis-1/2 hidden min-[410px]:block ">
               <Calendar />
             </div>
             <div className="basis-1/2">
@@ -115,8 +117,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section>
+      </Section>
+      <Section id="contact">
         <div className="container mx-auto flex flex-col my-20 md:flex-row gap-8 p-8 md:p-0">
           <div className="basis-1/2">
             <h3>Address</h3>
@@ -140,7 +142,7 @@ export default function Home() {
           <div className="basis-1/2">
             <h3>Contact Me</h3>
             <form className="mt-12">
-              <div className="flex sm:flex-col md:flex-row gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <div className="basis-1/3">
                   <label htmlFor="name" className="text-lg">
                     Name *
@@ -198,7 +200,7 @@ export default function Home() {
             </form>
           </div>
         </div>
-      </section>
+      </Section>
     </>
   );
 }
