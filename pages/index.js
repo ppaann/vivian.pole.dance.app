@@ -1,4 +1,3 @@
-import styles from "../styles/home.module.css";
 import Image from "next/image";
 import selfPhoto from "../public/assets/about_0.jpg";
 import course1 from "../public/assets/course_1.jpeg";
@@ -7,6 +6,7 @@ import course3 from "../public/assets/course_5.jpg";
 
 import Calendar from "../components/Calendar";
 import Section from "../components/Section";
+import Form from "../components/Form";
 
 export default function Home() {
   return (
@@ -21,15 +21,20 @@ export default function Home() {
               <div className="container mx-auto px-8">
                 <h3 className="py-8">I am Vivian</h3>
                 <p className=" text-xl font-light">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                  eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-                  justo. Nullam dictum felis eu pede mollis pretium. Integer
-                  tincidunt. Cras dapibus. Vivamus elementum
+                  Peiwen Pan In 2017, Peiwen embarked on an extraordinary
+                  journey. With no prior background in dance, she discovered
+                  that pole dance held a unique power over her. It was more than
+                  just a hobby; it was her calling. What drew Peiwen into the
+                  captivating world of pole dance was its undeniable allure and
+                  the challenges it posed.
+                </p>
+                <p className="text-xl font-light pt-6">
+                  This enchanting art form offered her both a sense of
+                  completion and the thrill of facing the unknown. It was here
+                  that she found her purpose - to build the strength, grace, and
+                  skills necessary to conquer gravity and master the art of pole
+                  dance. Peiwen loves doing tricks on spin pole, inversion and
+                  dancing in heels.
                 </p>
               </div>
             </div>
@@ -141,63 +146,7 @@ export default function Home() {
           </div>
           <div className="basis-1/2">
             <h3>Contact Me</h3>
-            <form className="mt-12">
-              <div className="flex flex-col md:flex-row gap-3">
-                <div className="basis-1/3">
-                  <label htmlFor="name" className="text-lg">
-                    Name *
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Name"
-                    className="w-full p-3 rounded dark:bg-gray-800"
-                  />
-                </div>
-                <div className="basis-1/3">
-                  <label htmlFor="email" className="text-lg">
-                    Email *
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Email"
-                    className="w-full p-3 rounded dark:bg-gray-800"
-                  />
-                </div>
-                <div className="basis-1/3">
-                  <label htmlFor="phone" className="text-lg">
-                    Mobile
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    placeholder="Phone number"
-                    className="w-full p-3 rounded dark:bg-gray-800"
-                  />
-                </div>
-              </div>
-              <div className="mt-8">
-                <label htmlFor="message" className="text-lg">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  rows="3"
-                  placeholder="..."
-                  className="w-full p-3 rounded dark:bg-gray-800"
-                ></textarea>
-              </div>
-              <div className="mt-8 flex flex-row gap-8 justify-start">
-                <button
-                  className="bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-8 focus:outline-none focus:shadow-outline"
-                  type="button"
-                >
-                  SUBMIT
-                </button>
-                <p className="text-gray-500">* required field</p>
-              </div>
-            </form>
+            <Form />
           </div>
         </div>
       </Section>

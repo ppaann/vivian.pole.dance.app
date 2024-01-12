@@ -9,10 +9,11 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 import "../styles/globals.css";
+import { NextUIProvider } from "@nextui-org/react";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <NextUIProvider>
       <Head>
         <title>Pole Dancer Vivian</title>
         <link rel="icon" href="/favicon.ico" />
@@ -24,6 +25,6 @@ export default function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </NextUIProvider>
   );
 }
