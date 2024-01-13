@@ -125,7 +125,6 @@ const Form = () => {
           rows="3"
           placeholder="Type your message here..."
           required
-          minLength={1}
           onChange={(event) => handleInputChange("message", event.target.value)}
           value={enteredValue.message}
           className="w-full p-3 border-2 rounded dark:bg-gray-800"
