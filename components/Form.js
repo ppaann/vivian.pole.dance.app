@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./form.scss";
+import "./form.css";
 
 const Form = () => {
   const defaultEnteredValue = {
