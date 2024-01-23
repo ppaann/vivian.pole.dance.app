@@ -75,7 +75,9 @@ const Form = () => {
             className="w-full p-3 border-2 rounded dark:bg-gray-800"
           />
           <span
-            className={`${formValidation} error ${nameIsValid ? "show" : ""}`}
+            className={`${styles.formValidation} error ${
+              nameIsValid ? "show" : ""
+            }`}
           >
             Enter at least one letter
           </span>
@@ -96,7 +98,9 @@ const Form = () => {
             className="w-full p-3 border-2 rounded dark:bg-gray-800"
           />
           <span
-            className={`${formValidation} error ${emailIsValid ? "show" : ""}`}
+            className={`${styles.formValidation} error ${
+              emailIsValid ? "show" : ""
+            }`}
           >
             Enter valid email address
           </span>
@@ -116,7 +120,9 @@ const Form = () => {
             className="w-full p-3 border-2 rounded dark:bg-gray-800"
           />
           <span
-            className={`${formValidation} error ${phoneIsValid ? "show" : ""}`}
+            className={`${styles.formValidation} error ${
+              phoneIsValid ? "show" : ""
+            }`}
           >
             Enter valid phone number
           </span>
@@ -136,7 +142,7 @@ const Form = () => {
           value={enteredValue.message}
           className="w-full p-3 border-2 rounded dark:bg-gray-800"
         ></textarea>
-        <span className="${formValidation} error">
+        <span className={`${styles.formValidation} error`}>
           Please enter your message
         </span>
       </div>
