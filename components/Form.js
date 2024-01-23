@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./form.css";
+import styles from "./form.module.scss";
 
 const Form = () => {
   const defaultEnteredValue = {
@@ -29,10 +29,15 @@ const Form = () => {
   };
 
   const phoneIsValid =
-    didEdit.phone && enteredValue.phone.match(/\d/g).length === 10;
-  const emailIsValid = didEdit.email && enteredValue.email.includes("@");
-  const nameIsValid = didEdit.name && enteredValue.name.length > 1;
-  const messageIsValid = didEdit.message && enteredValue.message.length > 1;
+    didEdit.phone &&
+    enteredValue.phone &&
+    enteredValue.phone.match(/\d/g).length === 10;
+  const emailIsValid =
+    didEdit.email && enteredValue.email && enteredValue.email.includes("@");
+  const nameIsValid =
+    didEdit.name && enteredValue.name && enteredValue.name.length > 1;
+  const messageIsValid =
+    didEdit.message && enteredValue.message && enteredValue.message.length > 1;
 
   const handleInputBlur = (identifier) => {
     setEdited((prevValue) => ({
@@ -69,7 +74,9 @@ const Form = () => {
             required
             className="w-full p-3 border-2 rounded dark:bg-gray-800"
           />
-          <span className={`formValidation error ${nameIsValid ? "show" : ""}`}>
+          <span
+            className={`${formValidation} error ${nameIsValid ? "show" : ""}`}
+          >
             Enter at least one letter
           </span>
         </div>
@@ -89,7 +96,7 @@ const Form = () => {
             className="w-full p-3 border-2 rounded dark:bg-gray-800"
           />
           <span
-            className={`formValidation error ${emailIsValid ? "show" : ""}`}
+            className={`${formValidation} error ${emailIsValid ? "show" : ""}`}
           >
             Enter valid email address
           </span>
@@ -109,7 +116,7 @@ const Form = () => {
             className="w-full p-3 border-2 rounded dark:bg-gray-800"
           />
           <span
-            className={`formValidation error ${phoneIsValid ? "show" : ""}`}
+            className={`${formValidation} error ${phoneIsValid ? "show" : ""}`}
           >
             Enter valid phone number
           </span>
@@ -129,7 +136,9 @@ const Form = () => {
           value={enteredValue.message}
           className="w-full p-3 border-2 rounded dark:bg-gray-800"
         ></textarea>
-        <span className="formValidation error">Please enter your message</span>
+        <span className="${formValidation} error">
+          Please enter your message
+        </span>
       </div>
       <div className="mt-8 flex flex-row gap-8 justify-start">
         <button

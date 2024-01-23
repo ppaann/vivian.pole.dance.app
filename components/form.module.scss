@@ -80,10 +80,10 @@
   -o-animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
   animation: notifanim-fo 0.4s cubic-bezier(0.55, 0, 0.1, 1) forwards;
 }
-.formValidation.valid {
-  opacity: 0;
-  visibility: hidden;
-}
+// .formValidation.valid {
+//   opacity: 0;
+//   visibility: hidden;
+// }
 @media (max-width: 767px) {
   .formValidation {
     text-align: right;
